@@ -1,0 +1,8 @@
+services:
+  app:
+    build:
+      context: '.'
+      args:
+        UID: "${USERID:-1000}"  # 実行ユーザーのUIDにする
+    volumes:
+      - './:/app/:rw'
