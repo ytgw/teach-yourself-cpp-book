@@ -13,6 +13,7 @@ public:
     void set_y(type value);
     void set_z(type value);
     void set(type x, type y, type z);
+    void show();
 
 private:
     type x_;
@@ -39,16 +40,20 @@ void Vector3D::set(type x, type y, type z = 0)
 }
 
 
+void Vector3D::show()
+{
+    std::cout << std::format("x: {}, y: {}, z: {}", x_, y_, z_) << std::endl;
+}
+
+
 int main()
 {
     Vector3D::type x, y;
 
-    std::cout << "Vector3Dのx, yを入力してください" << std::endl;
-    std::cout << "x > ";
-    std::cin >> x;
-    std::cout << "y > ";
-    std::cin >> y;
+    std::cout << "Vector3Dのx, yを入力してください(例: 1 2) > ";
+    std::cin >> x >> y;
 
     Vector3D vec;
     vec.set(x, y);
+    vec.show();
 }

@@ -34,13 +34,8 @@ int main()
 {
     Vector3D::type x, y, z;
 
-    std::cout << "Vector3Dのx, y, zを入力してください" << std::endl;
-    std::cout << "x > ";
-    std::cin >> x;
-    std::cout << "y > ";
-    std::cin >> y;
-    std::cout << "z > ";
-    std::cin >> z;
+    std::cout << "Vector3Dのx, y, zを入力してください(例: 1 2 3) > ";
+    std::cin >> x >> y >> z;
 
     Vector3D vec;
     vec.set_x(x);
